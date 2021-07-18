@@ -46,8 +46,8 @@ let num = 0;// +prompt("Enter number, please","");
 while(num!=33){
     num = +prompt("Enter number, please","");
     if (num!=33)
-    alert("Wrong number");
+    {alert("Wrong number");}
     else
-    alert("U are lucky");
+    {alert("U are lucky");}
 
 }

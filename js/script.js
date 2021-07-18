@@ -19,22 +19,35 @@
 
 // alert(`Привет,${user}`);
 
-const numberOfFilms = prompt("How much films u are was seen?","");
+// const numberOfFilms = prompt("How much films u are was seen?","");
 
-const personalMovieDB = {
-count : numberOfFilms,
-movies : {},
-actors : {},
-genres : [],
-privat : false
-}; 
+// const personalMovieDB = {
+// count : numberOfFilms,
+// movies : {},
+// actors : {},
+// genres : [],
+// privat : false
+// }; 
 
-const a = prompt("One of last seen films?",""),
-      b = prompt("How many points do u rate?",""),
-      c = prompt("One of last seen films?",""),
-      d = prompt("How many points do u rate?","");
+// const a = prompt("One of last seen films?",""),
+//       b = prompt("How many points do u rate?",""),
+//       c = prompt("One of last seen films?",""),
+//       d = prompt("How many points do u rate?","");
 
-personalMovieDB[a] = b;
-personalMovieDB[c] = d;
+// personalMovieDB[a] = b;
+// personalMovieDB[c] = d;
 
-console.log(personalMovieDB);
+// console.log(personalMovieDB);
+
+let num = 0;// +prompt("Enter number, please","");
+
+// (num%2===0) ? alert("Четное") : alert("Нечетное") ;
+
+while(num!=33){
+    num = +prompt("Enter number, please","");
+    if (num!=33)
+    alert("Wrong number");
+    else
+    alert("U are lucky");
+
+}

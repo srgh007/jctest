@@ -12,9 +12,29 @@
 // answers[1] = prompt("Возраст");
 // document.write(answers);
 
-const category = 'toys';
-console.log(`http://www.somesite.com/${category}/5`);
+// const category = 'toys';
+// console.log(`http://www.somesite.com/${category}/5`);
 
-const user = "Ivan";
+// const user = "Ivan";
 
-alert(`Привет,${user}`);
+// alert(`Привет,${user}`);
+
+const numberOfFilms = prompt("How much films u are was seen?","");
+
+const personalMovieDB = {
+count : numberOfFilms,
+movies : {},
+actors : {},
+genres : [],
+privat : false
+}; 
+
+const a = prompt("One of last seen films?",""),
+      b = prompt("How many points do u rate?",""),
+      c = prompt("One of last seen films?",""),
+      d = prompt("How many points do u rate?","");
+
+personalMovieDB[a] = b;
+personalMovieDB[c] = d;
+
+console.log(personalMovieDB);

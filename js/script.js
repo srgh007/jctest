@@ -1,5 +1,9 @@
 "restrict"
 
+
+const num = Math.round((Math.random()*100)).toString();
+alert(num);
+
 console.log(substring(prompt("Enter u name"),0,3));
 console.log(prompt("Enter word").substring(0,3));
 

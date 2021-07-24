@@ -1,11 +1,17 @@
 "restrict"
 
+console.log(substring(prompt("Enter u name"),0,3));
+console.log(prompt("Enter word").substring(0,3));
 
 showFirstMessage("Before func");
 // создаётся в первую очередь до начала обработки остального скрипта
 // можно вызвать до объявления!
 function showFirstMessage(Text){
     console.log(Text)
+}
+
+function substring(Text,a,b){
+    return Text.slice(a,b);
 }
 
 showFirstMessage(prompt("Enter anything",""));

@@ -1,6 +1,10 @@
 "restrict"
 
 
+const tst = "125.25qwerty777";
+console.log(parseInt(tst));
+console.log(parseFloat(tst));
+
 const num = Math.round((Math.random()*100)).toString();
 alert(num);
 

@@ -32,7 +32,13 @@ privat : false
 for(let i=0;i<2;i++){
 const a = prompt("One of last seen films?",""),
       b = prompt("How many points do u rate?","");
- personalMovieDB[a] = b;}
+ if(a!=null && b!= null && a != '' && b != '')
+      {personalMovieDB.movies[a] = b;    
+        console.log('done');}
+    else
+   {console.log('error');
+       i--;}
+    }
 // personalMovieDB[c] = d;
 
  console.log(personalMovieDB);

@@ -1,9 +1,9 @@
 "restrict"
-// создаётся в первую очередь до начала обработки остального скрипта
-// можно вызвать до объявления!
+
 
 showFirstMessage("Before func");
-
+// создаётся в первую очередь до начала обработки остального скрипта
+// можно вызвать до объявления!
 function showFirstMessage(Text){
     console.log(Text)
 }
@@ -16,7 +16,7 @@ const someValue = function(){
 
 someValue();
 
-//стрелочная функция - аналог лямбда-выражения Java
+//стрелочная функция - аналог лямбда-выражения Java для func.expression
 const anotherFunc = (a,b) => a*b;
 
 console.log(anotherFunc(9,5));

@@ -59,20 +59,37 @@
 
 // // alert(`Привет,${user}`);
 
- const numberOfFilms = 99;//prompt("How much films u are was seen?","");
+//  const numberOfFilms = 99;//prompt("How much films u are was seen?","");
 
-const personalMovieDB = {
-count : numberOfFilms,
-movies : {},
-actors : {},
-genres : [],
-privat : false
-}; 
+// const personalMovieDB = {
+// count : numberOfFilms,
+// movies : {},
+// actors : {},
+// genres : [],
+// privat : false
+// }; 
 
-for(let i = 0; i<100;i++)
-{personalMovieDB.genres[i] = "GenreNomber"+Math.round(Math.random()*100);}
+// for(let i = 0; i<100;i++)
+// {personalMovieDB.genres[i] = "GenreNomber"+Math.round(Math.random()*100);}
 
-console.log(personalMovieDB);
+//console.log(personalMovieDB);
+
+function fillArray(ArraySize, callback){
+    // for(let i = 0; i<ArraySize;i++)
+    // {personalMovieDB.genres[i] = "GenreNomber"+Math.round(Math.random()*100);}
+    console.log('Its first function ' + ArraySize);
+    callback();
+}
+
+function done(){
+    console.log("All done!");
+}
+
+fillArray(20,function(){
+console.log('Its second function');
+});
+
+fillArray(20,done);
 
 // // for(let i=0;i<2;i++){
 // // const a = prompt("One of last seen films?",""),

@@ -1,26 +1,52 @@
 "use strict"
 
-
-
-
-
-const soldier = {
-    armor: 500,
-    strength: 300,
-    sayHello: function(){
-        console.log("Hi");
+const obj = {
+    numOfbook:5,
+    otvet:0,
+    privat:false,
+    toggle: function(){
+        if(this.privat)
+        {this.privat=false;}
+        else
+        {this.privat=true;}
+    },
+    showPrivat:function(){
+        console.log(this.privat);
+    },
+    writeNumbers:function(){
+        let sumVal = 0;
+        const nums = prompt(`Write some numbers`);
+        const numsArr = nums.split(',');
+        for(let val of numsArr){
+            sumVal += parseInt(val);
+        }
+        this.otvet=sumVal;
+    },
+    showAnswer:function(){
+        const out = this.otvet;
+        console.log(`Ответ = ${out}`);
     }
 };
 
-const morpech = Object.create(soldier);
 
-const letchik = {};
 
-Object.setPrototypeOf(letchik,soldier);
+// const soldier = {
+//     armor: 500,
+//     strength: 300,
+//     sayHello: function(){
+//         console.log("Hi");
+//     }
+// };
 
-letchik.sayHello();
+// const morpech = Object.create(soldier);
 
-morpech.sayHello();
+// const letchik = {};
+
+// Object.setPrototypeOf(letchik,soldier);
+
+// letchik.sayHello();
+
+// morpech.sayHello();
 
 // function copy(objIn){
 //     let objOut = {};

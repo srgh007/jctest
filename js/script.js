@@ -1,32 +1,54 @@
 "use strict"
 
-function copy(objIn){
-    let objOut = {};
-    let key;
-    for(key in objIn){
-        objOut[key] = objIn[key];
-    }
-    return objOut;
-}
 
-const numbers = {
-    a:1,
-    b:7,
-    c:9,
-    d:{
-        x:55,
-        y:66,
-        z:77
+
+
+
+const soldier = {
+    armor: 500,
+    strength: 300,
+    sayHello: function(){
+        console.log("Hi");
     }
 };
 
-const numbers2 = copy(numbers);
-const numbers3 = {...numbers,
-u:777};
+const morpech = Object.create(soldier);
 
-console.log(numbers);
-console.log(numbers2);
-console.log(numbers3);
+const letchik = {};
+
+Object.setPrototypeOf(letchik,soldier);
+
+letchik.sayHello();
+
+morpech.sayHello();
+
+// function copy(objIn){
+//     let objOut = {};
+//     let key;
+//     for(key in objIn){
+//         objOut[key] = objIn[key];
+//     }
+//     return objOut;
+// }
+
+// const numbers = {
+//     a:1,
+//     b:7,
+//     c:9,
+//     d:{
+//         x:55,
+//         y:66,
+//         z:77
+//     }
+// };
+
+// const numbers2 = copy(numbers);
+// const numbers3 = {...numbers,
+// u:777};
+
+// console.log(numbers);
+// console.log(numbers2);
+// console.log(numbers3);
 
 
 

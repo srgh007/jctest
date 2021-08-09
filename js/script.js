@@ -1,15 +1,46 @@
-"restrict"
+"use strict"
 
-const arr = [11,23,15,7,14];
+function copy(objIn){
+    let objOut = {};
+    let key;
+    for(key in objIn){
+        objOut[key] = objIn[key];
+    }
+    return objOut;
+}
 
-// for (let val of arr){
-//     console.log(val);
-// }
-arr.sort(function(a,b){return (a-b);});
+const numbers = {
+    a:1,
+    b:7,
+    c:9,
+    d:{
+        x:55,
+        y:66,
+        z:77
+    }
+};
 
-console.log(arr);
+const numbers2 = copy(numbers);
+const numbers3 = {...numbers,
+u:777};
 
-arr.forEach(function(item,i,arr){console.log(`${i} : ${item} in ${arr}`);});
+console.log(numbers);
+console.log(numbers2);
+console.log(numbers3);
+
+
+
+
+// const arr = [11,23,15,7,14];
+
+// // for (let val of arr){
+// //     console.log(val);
+// // }
+// arr.sort(function(a,b){return (a-b);});
+
+// console.log(arr);
+
+// arr.forEach(function(item,i,arr){console.log(`${i} : ${item} in ${arr}`);});
 // const obj = {
 // width: 1024,
 // height: 1024,

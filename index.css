@@ -1,0 +1,35 @@
+.circle{
+    width:100px;
+    height:100px;
+    display:block;
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    -khtml-border-radius:50px;
+    font-size:20px; color:#fff;
+    line-height:100px;
+    text-align:center;
+    background:rgb(163, 12, 12)
+    
+   }
+
+   .box{
+    width:100px;
+    height:100px;
+    display:block;
+    font-size:20px; color:#fff;
+    line-height:100px;
+    text-align:center;
+    background:rgb(46, 31, 31)
+    
+   }
+
+   .wrapper {
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+  
+    max-width: 960px; /* 2 */
+  
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+  }

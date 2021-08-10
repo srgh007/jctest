@@ -28,7 +28,12 @@ const obj = {
     }
 };
 
+function Hello(){
+    console.log("Hello, world");
+    // debugger;
+}
 
+Hello();
 
 // const soldier = {
 //     armor: 500,

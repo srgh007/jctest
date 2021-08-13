@@ -1,22 +1,81 @@
 "use strict"
 // удобный способ объявить все элементы
 const   box = document.getElementById(`box`),
-        btns = document.getElementsByTagName(`button`),
+        // btns = document.getElementsByTagName(`button`),
         wrapper = document.querySelector(`.wrapper`),
-        circles = document.getElementsByClassName(`circle`),
-        hearts = wrapper.querySelectorAll(`.heart`);
-console.log(box);
+        // circles = document.getElementsByClassName(`circle`),
+        hearts = wrapper.querySelectorAll(`.heart`),
+        btn = document.querySelector(`button`),
+        btnsList = document.querySelectorAll('button'),
+        firstCircle  = document.querySelector('.circle'),
+        circleList = document.querySelectorAll('.circle'),
+        // overlay = document.querySelector('.overlay'),
+        link = document.querySelector('a');
+
+btn.addEventListener(`click`,(e)=>{
+    console.log(e.currentTarget);
+    console.log(e.type);
+});
+
+// overlay.addEventListener(`click`,(e)=>{
+//     console.log(e.currentTarget);
+//     console.log(e.type);
+// });
+
+const deleteElement = (e) => {
+e.target.remove();
+};
+
+const elementInfo = (e) => {
+    console.log(e.target);
+    };
+    
+
+link.addEventListener(`click`, (e) => {
+    e.preventDefault();
+    console.log(e.target);
+});
+
+btnsList.forEach(item => {
+item.addEventListener(`click`,elementInfo, {once:true});
+});
+
+// circleList[0].addEventListener('click',(e) => {
+//     // console.log('Mouse enter on circle #1');
+// e.target.remove();
+// });
+
+circleList[0].addEventListener('click', deleteElement);
+
+// btn.onclick = function(){
+//     alert('Заработала!');
+// };
+
+// btnsList[2].onclick = function(){
+//     alert('2!');
+// };
+
+// firstCircle.onclick = function(){
+//     alert('First circle');
+// };
+
+// circleList[1].onclick = function(){
+//     alert('Second circle');
+// }; 
+
+
+        console.log(box);
 // console.dir(box);
 
-console.log(btns[2]);
-console.log(circles); 
+console.log(btnsList[2]);
+console.log(circleList); 
 hearts.forEach(e => {console.log(e);});
 
 box.style.backgroundColor = `blue`;
 box.style.width = `500px`;
 box.style.height = `500px`;
 
-btns[1].style.borderRadius = `50%`;
+btnsList[1].style.borderRadius = `50%`;
 let width = 100;
 let height = 100;
 box.style.cssText = `background-color: blue; width: ${width}px; height: ${height}px;`;
@@ -42,15 +101,16 @@ function myFunc() {
     const text = document.createTextNode( "Mybutton" ); // создаем текстовое содержимое
     newElem.appendChild( text ); // добавляем текстовое содержимое элементу <button>                     
     document.body.appendChild( newElem );  // добавляем наш элемент в элемент <body>
+    newElem.style.backgroundClip = "alert('Click!')";
     // hearts[0].after(newElem);
 }
 
 // circles[0].remove();
 // hearts[0].replaceWith(circles[0]);
 
-circles[1].innerHTML = `<h1>Hello</h1>`;
+circleList[1].innerHTML = `<h1>Hello</h1>`;
 // circles[1].textContent = `vbnvnvn`;
-circles[0].insertAdjacentHTML("beforebegin",`<h1>Hi</h1>`);
+circleList[0].insertAdjacentHTML("beforebegin",`<h1>Hi</h1>`);
 
   myFunc();
 

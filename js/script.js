@@ -1,4 +1,58 @@
 "use strict"
+// удобный способ объявить все элементы
+const   box = document.getElementById(`box`),
+        btns = document.getElementsByTagName(`button`),
+        wrapper = document.querySelector(`.wrapper`),
+        circles = document.getElementsByClassName(`circle`),
+        hearts = wrapper.querySelectorAll(`.heart`);
+console.log(box);
+// console.dir(box);
+
+console.log(btns[2]);
+console.log(circles); 
+hearts.forEach(e => {console.log(e);});
+
+box.style.backgroundColor = `blue`;
+box.style.width = `500px`;
+box.style.height = `500px`;
+
+btns[1].style.borderRadius = `50%`;
+let width = 100;
+let height = 100;
+box.style.cssText = `background-color: blue; width: ${width}px; height: ${height}px;`;
+
+// for(let i = 0;i<hearts.length;i++){
+//     hearts[i].style.backgroundColor = `black`;
+// }
+
+hearts.forEach(item => {item.style.backgroundColor=`green`;});
+// const text = document.createTextNode(`Its Text from node`);
+
+let div = document.createElement('div');
+div.classList.add("myDiv");
+// let text = document.createTextNode('Test');
+// div.appendChild(text);
+// document.body.appendChild(div);
+document.body.append(div);
+// document.querySelector(`.wrapper`).prepend(div);
+//hearts[0].after(div);
+
+function myFunc() {
+    let  newElem = document.createElement( "button" ); // создаем новый элемент <button>
+    const text = document.createTextNode( "Mybutton" ); // создаем текстовое содержимое
+    newElem.appendChild( text ); // добавляем текстовое содержимое элементу <button>                     
+    document.body.appendChild( newElem );  // добавляем наш элемент в элемент <body>
+    // hearts[0].after(newElem);
+}
+
+// circles[0].remove();
+// hearts[0].replaceWith(circles[0]);
+
+circles[1].innerHTML = `<h1>Hello</h1>`;
+// circles[1].textContent = `vbnvnvn`;
+circles[0].insertAdjacentHTML("beforebegin",`<h1>Hi</h1>`);
+
+  myFunc();
 
 const obj = {
     numOfbook:5,

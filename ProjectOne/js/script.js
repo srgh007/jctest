@@ -1,5 +1,7 @@
 "use strict"
 // удобный способ объявить все элементы
+window.addEventListener('DOMContentLoaded', () => {
+
 const   box = document.getElementById(`box`),
         // btns = document.getElementsByTagName(`button`),
         wrapper = document.querySelector(`.wrapper`),
@@ -114,6 +116,21 @@ circleList[0].insertAdjacentHTML("beforebegin",`<h1>Hi</h1>`);
 
   myFunc();
 
+  box.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      console.log(e.target);
+  });
+
+  box.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    console.log(e.targetTouches[0].pageX);
+});
+
+box.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    console.log('End');
+});
+
 const obj = {
     numOfbook:5,
     otvet:0,
@@ -148,6 +165,8 @@ function Hello(){
 }
 
 Hello();
+
+});
 
 // const soldier = {
 //     armor: 500,
